@@ -87,7 +87,7 @@ def compute_normalized_ssd(original, zoomed):
 
 # --- Execution ---
 # 1. Start with original
-original_img = cv2.imread('runway.jpg')
+original_img = cv2.imread('./runway.png')
 
 # 2. Shrink it (Downsample)
 small_img = zoom_image(original_img, 0.5, method='bilinear')

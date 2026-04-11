@@ -50,10 +50,9 @@ plt.savefig('gaussian_surface.png')
 # Apply gaussian smoothing to an image
 from scipy.signal import convolve2d
 img = cv2.imread('./runway.png', cv2.IMREAD_GRAYSCALE)
-
-# Using scipy's convolve2d for a clean 'manual' mathematical approach
-# 'boundary=fill' handles the edges of the image
-smoothed_manual = convolve2d(img, kernel_5x5, mode='same', boundary='fill', fillvalue=0)
+smoothed_manual = convolve2d(img, kernel_5x5, mode='same', 
+                             boundary='fill', fillvalue=0)
+cv2.imwrite('scipy_gaussian_blur.jpg', smoothed_manual)
 
 # do gaussian smoothing using OpenCV's built-in function for comparison
 smoothed_opencv = cv2.GaussianBlur(img, (5, 5), sigmaX=2)

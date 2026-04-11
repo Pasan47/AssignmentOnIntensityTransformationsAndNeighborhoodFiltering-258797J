@@ -36,7 +36,7 @@ def custom_histogram_equalization(image):
 # --- Execution ---
 # Load the runway image
 img_path = './runway.png'
-print(f"Processing image: {cv2.imread(img_path).shape}")
+#print(f"Processing image: {cv2.imread(img_path).shape}")
 original_gray, equalized = custom_histogram_equalization(cv2.imread(img_path))
 
 

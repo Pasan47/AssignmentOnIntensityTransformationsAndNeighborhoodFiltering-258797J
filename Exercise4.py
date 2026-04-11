@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load image in grayscale
-img = cv2.imread('photo-1653775545518-3679836a8933.avif', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('photo-1653775545518-3679836a8933.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Apply Otsu's thresholding
 # ret is the computed threshold value, mask is the binary image
@@ -38,7 +38,7 @@ def masked_histogram_equalization(image_path):
     return img, mask, img_equalized
 
 # --- Execution ---
-original, fg_mask, result = masked_histogram_equalization('photo-1653775545518-3679836a8933.avif')
+original, fg_mask, result = masked_histogram_equalization('photo-1653775545518-3679836a8933.jpg')
 
 # --- Visualization ---
 plt.figure(figsize=(15, 5))
